@@ -70,6 +70,7 @@ take common css as example:
 
 - larger portion structure that can be used in many places.
 - e.g., navigation bar, search, login, register, etc.
+
 ### 6. Reusable UI Elements
 
 - the smallest unit of element that cannot be divided into smaller anymore. 

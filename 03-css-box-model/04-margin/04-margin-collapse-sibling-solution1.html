@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>03-Margin: Margin Collapsing</title>
+    <title>04-Margin: Margin Collapsing (Siblings) - Solution 1</title>
     <style>
         .box {
             width: 200px;
@@ -13,6 +13,9 @@
         .box1 {
             background-color: khaki;
             margin-bottom: 100px;
+            /* Solution 1: Add inline-block to one of the sibling element */
+            /* This is related to BFC. */
+            display: inline-block;
         }
 
         .box2 {

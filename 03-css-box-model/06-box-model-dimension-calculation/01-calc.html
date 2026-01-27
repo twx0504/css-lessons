@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-Box Model Calculation</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: khaki;
+        border: 50px solid blue;
+        padding: 40px;
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- content-box (default box-sizing) -->
+    <!-- content area = width & height -->
+
+    <!-- visible size (offset width/height) -->
+    <!-- visible width = width + left & right padding + left & right border -->
+    <!-- visible width = 100 + 2 * 40 + 2 * 50 = 280px -->
+    <!-- visible height = height + top & bottom padding + top & bottom border -->
+    <!-- visible height = 100 + 2 * 40 + 2 * 50 = 280px -->
+
+    <!-- total space (including margin) -->
+    <!-- total width = visible width + left & right margin -->
+    <!-- total width = 280 + 2 * 50 = 380px -->
+    <!-- total height = visible height + top & bottom margin -->
+    <!-- total height = 280 + 2 * 50 = 380px -->
+    <div class="box"></div>
+  </body>
+</html>

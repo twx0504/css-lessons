@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-Padding</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: khaki;
+            border: 1px solid red;
+            /* padding: all sides have 20px padding */
+            /* 1. one value */
+            /* padding: 20px; */
+
+            /* 2. two value: top-bottom left-right */
+            /* padding: 20px 10px; */
+
+            /* 3. three value: top left-right bottom */
+            /* padding: 10px 20px 30px; */
+
+            /* 4. four value: top right bottom left (clockwise) */
+            padding: 5px 10px 15px 20px;
+            
+            /* Side specific properties: We can set individual side's padding */
+            /* padding-top: 20px;
+            padding-left: 10px;
+            padding-right:5px;
+            padding-bottom:15px */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, non!</div>
+</body>
+</html>

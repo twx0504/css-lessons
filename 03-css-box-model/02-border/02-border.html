@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02-Border Property-Specific Shorthands</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        border: 4px solid red;
+
+        /* Note: We can use these individual property to overwrite the style set by border shorthand. */
+        /* Set border-width */
+        border-width: 20px;
+        /* Set border-style */
+        border-style: dashed;
+        /* Set border-color */
+        border-color: rgb(200, 100, 50);
+      }
+
+
+      /* Example usage: */
+      .container .item {
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+      }
+
+      /* Special: */
+      .container .item.last {
+        /* We overwrite border-color */
+        border-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="container">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <!-- Special -->
+      <div class="item last"></div>
+    </div>
+  </body>
+</html>

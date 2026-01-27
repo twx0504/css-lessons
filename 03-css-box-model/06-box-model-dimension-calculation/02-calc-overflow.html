@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02-Box Model Calculation: Overflow</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: khaki;
+        border: 50px solid blue;
+        padding: 40px;
+        margin: 50px;
+      }
+
+      .box .item {
+        width: 180px;
+        height: 180px;
+        padding: 20px;
+        border: 5px solid red;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- box -->
+    <!-- content width = 100px -->
+    <!-- content height = 100px -->
+
+    <!-- visible width = 100 + 2 * 40 + 2 * 50 = 280px -->
+    <!-- visible height = 100 + 2 * 40 + 2 * 50 = 280px -->
+
+    <!-- total width = 280 + 2 * 50 = 380px -->
+    <!-- total height = 280 + 2 * 50 = 380px -->
+
+    <!-- item -->
+    <!-- content width = 180px -->
+    <!-- content height = 180px -->
+
+    <!-- visible width = 180 + 2 * 20 + 2 * 5 = 230px -->
+    <!-- visible height = 180 + 2 * 20 + 2 * 5 = 230px -->
+
+    <!-- total width = 230 + 2 * 10 = 250px -->
+    <!-- total height = 230 + 2 * 10 = 250px -->
+
+    <!-- Conclusion: -->
+    <!-- since item total width and height > box content width and content height -->
+    <!-- The item overflows. -->
+    <div class="box">
+      <div class="item"></div>
+    </div>
+  </body>
+</html>

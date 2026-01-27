@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>08-Margin: Margin Collapsing (Parent-Child) Solution 1</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .wrap {
+        margin-left: 100px;
+        width: 200px;
+        height: 200px;
+        background-color: khaki;
+
+        /* Scenarios: */
+        /* Without specifying margin here, .item's margin-top takes precedence. */
+
+        /* This margin-top < .item's margin-top, .item's margin-top takes precedence. */
+        /* margin-top: 30px; */
+
+        /* This margin-top > .item's margin-top, this margin-top takes precedence.*/
+        margin-top: 100px;
+
+        /* Solution: Add overflow:hidden on parent element */
+        /* Make sure element will not overflow, as the overflow content will be hidden. */
+        overflow: hidden;
+      }
+
+      .item {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        margin-top: 50px;
+
+        /* Downside: If the element goes outside of the parent element, the exceeding part will be hidden. */
+        margin-left: -50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="item"></div>
+    </div>
+  </body>
+</html>

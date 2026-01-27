@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02-Box Sizing</title>
+    <style>
+      /* box-sizing property allows us to change the type of box model the element is using */
+
+      /* Change div from content-box to border-box */
+      .box {
+        box-sizing: border-box;
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        border: 10px solid red;
+        background-color: khaki;
+      }
+
+      /* Change button from border-box to content-box */
+      button {
+        box-sizing: content-box;
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        border: 10px solid red;
+        background-color: khaki;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Border Box</div>
+    <button>Content Box</button>
+  </body>
+</html>

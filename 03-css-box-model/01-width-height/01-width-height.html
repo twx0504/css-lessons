@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-Width-Height</title>
+    <style>
+      /* 
+            Width & Height:
+            1. <length>: px, em, rem, vh, vw etc.
+            2. <percent>: relative to the element's containing block width (content area of parent)
+
+            In development, pc site usually uses px, % mainly for mobile site, or responsive site
+        */
+      .box {
+        /* Set the width and height of the box */
+        width: 100px;
+        height: 100px;
+        border: 10px solid red; /* Note: this border will not affect the child item width */
+        background-color: khaki;
+      }
+
+      .item {
+        width: 50%;
+        height: 50%;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item"></div>
+    </div>
+  </body>
+</html>

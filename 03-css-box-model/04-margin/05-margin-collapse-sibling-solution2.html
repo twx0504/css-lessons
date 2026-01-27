@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-Margin: Margin Collapsing (Siblings) - Solution 2</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+      }
+
+      .box1 {
+        background-color: khaki;
+        /* Solution 2: Let one element to handle the margin - the simplest */
+        margin-bottom: 250px; /* 100 + 150 */
+      }
+
+      .box2 {
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- margin between box1 and box2 is 150px (The larger margin is chosen.) -->
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+  </body>
+</html>

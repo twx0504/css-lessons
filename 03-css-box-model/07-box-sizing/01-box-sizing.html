@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-Box Sizing</title>
+    <style>
+      /* content size = 200px, padding and border is not included. */
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: khaki;
+        padding: 20px;
+        border: 10px solid red;
+      }
+
+      /* button is border-box by default */
+      /* In border box, the content size is obtained via calculation */
+      /* content size = 200 - 20 - 20 - 10 - 10 = 140px */
+      /* So, in border box, the width and height that we set are the visible width and visible height */
+      /* visible size = content size + padding + border  */
+      button {
+        width: 200px;
+        height: 200px;
+        background-color: khaki;
+        padding: 20px;
+        border: 10px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Content Box</div>
+    <button>Border Box</button>
+  </body>
+</html>

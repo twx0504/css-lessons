@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07-Margin: Margin Collapsing (Parent-Child)</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .wrap {
+        width: 200px;
+        height: 200px;
+        background-color: khaki;
+
+        /* Scenarios of Margin Collapsing: */
+        /* Without specifying margin here, .item's margin-top takes precedence. */
+
+        /* This margin-top < .item's margin-top, .item's margin-top takes precedence. */
+        /* margin-top: 30px; */
+
+        /* This margin-top > .item's margin-top, this margin-top takes precedence.*/
+        margin-top: 100px;
+      }
+
+      .item {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="item"></div>
+    </div>
+  </body>
+</html>

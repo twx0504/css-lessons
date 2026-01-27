@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-Box Sizing</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        border: 1px solid red;
+        padding: 20px;
+      }
+
+      /* Content box requires us to calculate how much size the child element can fit in the content area of parent element */
+      /* item total size */
+      /* total size = 300 = size + padding +  border */
+      /* total size = 300 = x + (2*5) + (2*2) */
+      /* x = 300 - 14 = 286px */
+      /* In this case, we can use border-box, so we don't need to calculate. */
+      /* .item {
+        width: 286px;
+        height: 286px;
+        border: 2px solid blue;
+        padding: 5px;
+      } */
+
+      .item {
+        box-sizing: border-box;
+        /* The benefit of border box is that we no longer need to calculate width and height of child element manually! */
+        /* The calculation is done for us automatically. */
+        /* Assume margin = 0. */
+        /* Note: if margin presents, we need to subtract the margin. */
+        width: 300px; /* Visible width = content width + padding + border */
+        height: 300px; /* Visible height = content height + padding + border */
+        border: 2px solid blue;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Application of border box: -->
+    <!-- 1. When we want the elements keeping their visible size, regardless of how we change the padding or border. -->
+
+    <div class="box">
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ab, quas
+        veniam tenetur repudiandae fuga natus, vero amet debitis rem soluta
+        consequuntur? Hic ducimus fugiat voluptatum incidunt, recusandae
+        laboriosam non labore cupiditate dolorum voluptas modi nobis. Animi quos
+        rerum dolor libero perspiciatis harum deserunt ex omnis. Eum
+        necessitatibus error debitis.
+      </div>
+    </div>
+  </body>
+</html>

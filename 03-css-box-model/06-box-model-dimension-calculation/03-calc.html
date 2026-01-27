@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02-Box Model Calculation: Child Elements Wraps</title>
+    <style>
+      .wrap {
+        width: 300px;
+        height: 300px;
+        background-color: khaki;
+      }
+
+      /* content size */
+      /* content width = 300 */
+      /* content height = 300 */
+
+      .wrap .slide {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        background-color: red;
+
+        /* Set display: inline-block or float to make the element aligns in a row and observe the element wrapping. */
+        float: left;
+
+        /* Note: there are gaps between each slide (inline-block element) that is caused by whitespace in HTML */
+        /* display: inline-block; */
+      }
+
+      /* total size of slide */
+      /* number of element per row = content size of parent / total size of child */
+      /* total width = 50 + 20 = 70 */
+      /* total height = 50 + 20 = 70 */
+      /* 300 / 70 = ~4.29 （4 slides per row ) */
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+    </div>
+  </body>
+</html>

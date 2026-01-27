@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04-Text: line-height</title>
+    <style>
+      p {
+        margin: 0; /* Remove default margin */
+        font-size: 20px;
+
+        /* Line-height scales with p font-size */
+        /* 1.5 * 20px */
+        line-height: 1.5;
+
+        /* The problem with fixed line-height using absolute value like px may cause problem */
+        /* E.g, when the page is large, all the fonts will squeenze together. */
+        /* Unless we specify different line-height in each media queries! */
+        /* line-height: 30px; */
+      }
+
+      /* page width >= 800 */
+      @media screen and (min-width: 800px) {
+        p {
+          font-size: 40px;
+          /* Line-height scales with p font-size */
+          /* 1.5 * 40px */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
+      officiis?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
+      officiis?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
+      officiis?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
+      officiis?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
+      officiis?
+    </p>
+  </body>
+</html>

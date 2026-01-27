@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-Text: text-decoration</title>
+    <style>
+      h2 {
+        text-decoration: spelling-error;
+      }
+
+      p {
+        /* Note: For color, style, thickness to work, text-decoration-line must be specified! */
+        /* 
+        text-decoration-line: underline;
+        text-decoration-color: red;
+        text-decoration-style: dotted;
+        text-decoration-thickness: 5px; */
+
+        /* Shorthand */
+        /* text-decoration: underline red dotted 5px; */
+      }
+
+      p.wavy-underline {
+        text-decoration-line: underline;
+        text-decoration-style: wavy;
+      }
+
+      p.line-through {
+        text-decoration: line-through;
+      }
+
+      p > em {
+        /* Note: When a parent element have specified the text-decoration, child element cannot remove the line. */
+        /* text-decoration: none; */
+
+        /* Adding text-decoration to child element are possible */
+        text-decoration: overline;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quasi
+      perspiciatis, accusantium, rem ad dolor quae iure nisi neque fugit tenetur
+      blanditiis ratione, debitis vero voluptas dicta! Quo, nesciunt a.
+    </p>
+
+    <p class="wavy-underline">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+      doloremque!
+    </p>
+
+    <p class="line-through">
+      Lorem ipsum <em>Lorem, ipsum dolor.</em> sit amet.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07-Text: letter-spacing</title>
+    <style>
+        p {
+            text-align: center;
+            /* letter-spacing: 10px; */
+            /* letter-spacing: 0px; */
+
+            /* Beware of letter spacing < 0 */
+            /* The letter may overlap, or go in reversed order */
+            /* letter-spacing: -10px; */
+            /* It is useful if we want to achieve some text animation */
+            letter-spacing: -100px;
+        }
+
+        
+    </style>
+  </head>
+  <body>
+    <!-- Set the spacing between text characters -->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, nihil.
+    </p>
+    <p>我是中文句子。</p>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-Text: line-height</title>
+    <style>
+      .box {
+        border: 1px solid red;
+
+        /* Setting line-height === height of the container */
+        /* To achieve vertical centering of single line of text. */
+        /* Note: it is for single line! */
+        height: 50px;
+        line-height: 50px;
+      }
+
+      /* For multiline texts, we can consider using flex */
+      .box2 {
+        border: 1px solid red;
+        height: 100px;
+        display: flex;
+        justify-content: center; /* works if the child width is smaller than container */
+        text-align: center; /* horizontal centering for multi-line text */
+        align-items: center; /* vertical centering */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Line Height</div>
+
+    <div class="box2">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque voluptate
+      libero qui dolorem ad corrupti ut maxime, dicta aliquam tempora vel
+      repudiandae neque odit, provident ipsa sunt maiores id porro unde magnam
+      animi quia reiciendis velit at. Nulla autem doloribus, possimus nostrum
+      quisquam debitis, hic perferendis quasi, consectetur unde blanditiis.
+    </div>
+
+    <div class="box2">Lorem ipsum dolor sit amet.</div>
+  </body>
+</html>

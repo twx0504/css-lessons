@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02-List: list-style-image</title>
+    <style>
+
+        /* Note: using list-style-image, we cannot set the width and height of the image as marker! */
+      ul > li {
+        /* display: flex;
+        align-items: center; */
+        /* list-style: none; */
+        list-style-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwXEKpFXN9GMvzB3rJqdbt50Zcrng77vKXHg&s");
+      }
+
+      /* Using background image: */
+
+      /* li::before {
+        content: "";
+        display: inline-block;
+        height: 20px; 
+        width: 20px; 
+        background-image: url("https://cdn-icons-png.flaticon.com/512/9709/9709605.png");
+        background-size: contain; 
+        background-repeat: no-repeat;
+        margin-right: 10px;
+        background-position: 0 center;
+      } */
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </body>
+</html>

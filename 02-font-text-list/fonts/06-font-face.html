@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07-Font: Custom Font with @font-face</title>
+    <style>
+      body {
+        font-size: 40px;
+      }
+      /* roboto-regular - latin */
+      @font-face {
+        font-display: swap; /* if the font file is not loaded, use fallback first */
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        src: url("./roboto-v50-latin/roboto-v50-latin-regular.woff2")
+          format("woff2");
+      }
+
+      .regular {
+        font-family: "Roboto";
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, ratione
+      iure facilis minus debitis quas illo rerum dolorum eos dolor, non nostrum!
+      Minima quibusdam dolorum magni at laudantium praesentium suscipit.
+    </p>
+    <p class="regular">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, ratione
+      iure facilis minus debitis quas illo rerum dolorum eos dolor, non nostrum!
+      Minima quibusdam dolorum magni at laudantium praesentium suscipit.
+    </p>
+  </body>
+</html>

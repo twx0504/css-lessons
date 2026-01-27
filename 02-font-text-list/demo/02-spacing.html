@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo - Equal Spacing between Chinese and English words</title>
+    <style>
+      h3 {
+        /* Set English words spacing */
+        word-spacing: 20px;
+      }
+
+      h3 > span {
+        /* Control the space to the left of the first chinese word */
+        margin-left: 20px;
+        /* Set Chinese words spacing - note: Chinese word is considered a character / letter */
+        letter-spacing: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Wrap Chinese words in span -->
+    <h3>I am<span>帅哥</span></h3>
+  </body>
+</html>

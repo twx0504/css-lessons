@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-Font-Weight</title>
+    <style>
+     
+
+      .normal {
+        font-weight: 400;
+        /* font-weight: normal; */
+      }
+
+      .medium {
+        font-weight: 500;
+      }
+
+      .bold {
+        font-weight: 700;
+        /* font-weight: bold; */
+      }
+
+      .parent {
+        border: 1px solid;
+        border-color: red;
+        font-weight: bold;
+      }
+      .child {
+        font-weight: lighter;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="thin">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
+      consequuntur reiciendis perferendis autem similique amet, voluptates
+      mollitia laboriosam nihil maxime officia quidem blanditiis placeat
+      temporibus eligendi? Quo repudiandae quibusdam laudantium?
+    </p>
+    <p class="normal">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
+      consequuntur reiciendis perferendis autem similique amet, voluptates
+      mollitia laboriosam nihil maxime officia quidem blanditiis placeat
+      temporibus eligendi? Quo repudiandae quibusdam laudantium?
+    </p>
+    <p class="medium">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
+      consequuntur reiciendis perferendis autem similique amet, voluptates
+      mollitia laboriosam nihil maxime officia quidem blanditiis placeat
+      temporibus eligendi? Quo repudiandae quibusdam laudantium?
+    </p>
+    <p class="bold">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
+      consequuntur reiciendis perferendis autem similique amet, voluptates
+      mollitia laboriosam nihil maxime officia quidem blanditiis placeat
+      temporibus eligendi? Quo repudiandae quibusdam laudantium?
+    </p>
+
+    <div class="parent">
+      Parent Bold
+      <p class="child">
+        Child Lighter
+      </p>
+    </div>
+  </body>
+</html>

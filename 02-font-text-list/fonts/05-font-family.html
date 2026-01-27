@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-Font: Font Family</title>
+    <style>
+      p {
+        font-size: 20px;
+      }
+
+      /* font-family by default is depending on user agent (browsers) */
+      /* Note: use quote ("") for font-family name that contains multiple words, or doesn't have hyphen(-) */
+      /* e.g.,
+            1. "Segoe UI" (more than one word and without hyphen)
+            2. sans-serif (contains hyphen)
+            3. Arial (single word)
+        */
+        /* For Chinese font, quotes must be used */
+        /* e.g., 1. "宋体" (Chinese font)
+ */
+      .font-family-2 {
+        font-family: "Segoe UI";
+      }
+      .font-family-3 {
+        font-family: "Times New Roman";
+      }
+      .font-family-4 {
+        font-family: cursive;
+      }
+      .font-family-with-fallback {
+        /* Fallback options */
+        /* If the first option is not available, it will try the second, third, ... */
+        /* If all the font family is not supported, fallback to browser default font family */
+        font-family:
+          "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="font-family-1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque distinctio
+      in accusamus. Voluptatem ipsa aspernatur, eveniet sunt dolore voluptates
+      sint impedit exercitationem vero reprehenderit quaerat, doloremque hic
+      recusandae rem quisquam!
+    </p>
+    <p class="font-family-2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque distinctio
+      in accusamus. Voluptatem ipsa aspernatur, eveniet sunt dolore voluptates
+      sint impedit exercitationem vero reprehenderit quaerat, doloremque hic
+      recusandae rem quisquam!
+    </p>
+    <p class="font-family-3">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque distinctio
+      in accusamus. Voluptatem ipsa aspernatur, eveniet sunt dolore voluptates
+      sint impedit exercitationem vero reprehenderit quaerat, doloremque hic
+      recusandae rem quisquam!
+    </p>
+    <p class="font-family-4">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque distinctio
+      in accusamus. Voluptatem ipsa aspernatur, eveniet sunt dolore voluptates
+      sint impedit exercitationem vero reprehenderit quaerat, doloremque hic
+      recusandae rem quisquam!
+    </p>
+    <p class="font-family-with-fallback">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat,
+      officia. Illum, magni praesentium quis iusto cupiditate voluptates
+      dignissimos quia doloribus repellendus explicabo quasi illo ipsa, atque
+      sed rem ab debitis?
+    </p>
+  </body>
+</html>

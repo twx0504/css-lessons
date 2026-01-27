@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-Text: text-align</title>
+    <style>
+      p.center {
+        text-align: center;
+      }
+
+      .box {
+        /* text-align: center; */
+        text-align: right;
+      }
+
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="center">Lorem ipsum dolor sit amet.</p>
+    <p class="center">Lorem ipsum dolor sit amet.</p>
+    <p class="center">Lorem ipsum dolor sit amet.</p>
+    <p class="center">Lorem ipsum dolor sit amet.</p>
+    <div class="box">
+      <!-- block element - box2 -->
+      <div class="box2"></div>
+      <!-- block element - p -->
+      <p>
+        <!-- Text inside is still affected by the text-align! -->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
+        deleniti.
+      </p>
+      <!-- inline element - img -->
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2-LFKgoiSpUoVR-ZTyuU0YotH8FzGPi1iEQ&s"
+        alt="Husky"
+        width="200"
+      />
+    </div>
+  </body>
+</html>

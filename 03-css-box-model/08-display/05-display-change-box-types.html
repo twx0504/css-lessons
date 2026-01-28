@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-Display: Changing Box Types</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+
+        /* Change block box to inline-block box */
+        display: inline-block;
+
+        /* Again, change inline-block box to inline box, now the size properties doesn't work anymore */
+        display: inline;
+      }
+
+      span {
+        background-color: khaki;
+
+        /* Change inline box to block box  */
+        /* Now, each span occupies the whole row now. */
+        display: block;
+      }
+
+      a {
+        /* Change inline box to block box */
+        display: block;
+        /* Now, we can set the size of <a> element */
+        width: 200px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        text-decoration: none;
+        color: #666;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <span>span</span>
+    <span>span</span>
+    <span>span</span>
+
+    <!-- Sometimes, we use <a> as button -->
+    <!-- We need to set the size of <a> -->
+    <!-- Change it to block box -->
+    <a href="">Button</a>
+  </body>
+</html>

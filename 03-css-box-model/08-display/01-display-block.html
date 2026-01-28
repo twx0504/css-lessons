@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-Display - Block Element</title>
+    <style>
+      .box {
+        width: 400px;
+        height: 400px;
+        border: 1px solid red;
+      }
+
+      p {
+        background-color: khaki;
+      }
+
+      h3 {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Flow layout / Normal flow -->
+
+    <div class="box">
+      <!-- Outer display type: block -->
+      <!-- 1. block elements stack vertically -->
+      <!-- 2. vertical margin collapse -->
+      <!-- 3. gap between siblings decided by margin -->
+      <!-- 4. width and height can be set. -->
+      <!-- 5. respect padding, border, margin -->
+      <div>Lorem ipsum dolor sit amet.</div>
+      <h3>Lorem ipsum dolor sit amet.</h3>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <!-- Exception: -->
+    <!-- We should not put block element in <p> element / <h1-h6> element -->
+    <!-- <p><div></div></p>
+    <h1><p></p></h1> -->
+  </body>
+</html>

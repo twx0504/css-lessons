@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11-Image Whitespace Issue</title>
+    <style>
+      .box {
+        border: 2px solid blue;
+      }
+
+      .box img {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!--We can use the methods of solving whitespace issue on img. -->
+    <!-- Best practice: Just make img element as block element. -->
+    <div class="box">
+      <img
+        src="https://www.akc.org/wp-content/uploads/2017/11/Siberian-Husky-standing-outdoors-in-the-winter.jpg"
+        alt="Husky"
+      />
+    </div>
+  </body>
+</html>

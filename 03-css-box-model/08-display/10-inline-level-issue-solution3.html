@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10-Inline Level White Space Problem - Solution 3</title>
+    <style>
+      .box {
+        border: 1px solid blue;
+
+        /* Another way to clear floats is to set parent as inline-block or use overflow: hidden, as it introduces BFC. */
+        /* display: inline-block; */
+        /* overflow: hidden; */
+      }
+
+      span {
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        /* It is the same issue with inline element, but for demonstration purpose, use inline-block so we can set size. */
+
+        /* Solution 3: set span to float - but display: inline-block will be useless because float turns span into block element. */
+        /* Downside: Parent height collapsing */
+        float: left;
+      }
+
+      /* We need to clear floats to prevent parent height from collapsing. */
+      /* Add this class to parent which is box */
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box clearfix">
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+      <span>5</span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04-Display: Inline Replaced Element</title>
+    <style>
+      img {
+        /* By default, width and height will use img original width and height. */
+        /* To set it to our desired size, we can manually change the size. */
+        width: 100px;
+        height: 100px;
+        /* We can set padding too. */
+        padding: 10px;
+        /* We can also set margin. */
+        /* Note: By default, img will create some gaps. */
+        /* Solution 1: Change display to block to remove the gap, but the type of box will change. */
+        /* Solution 2: Change parent display to flex */
+        /* margin: 10px; */
+
+        border: 1px solid red;
+        object-fit: cover;
+
+        /* Note: */
+        /* Empty image may have some problem with vertical alignment. */
+        /* Default, img vertical alignment is baseline, change it to top/ middle/ other values to standardize the image vertical alignment. */
+        /* Also, setting alt text on empty img without specifying src will cause the img elmeent to shrink to the size of alt text. */
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Inline replaced elements: -->
+    <!-- Replaced element: the content is not controlled by CSS. -->
+    <!-- They are inline element, but behaves similar to inline-block element. -->
+    <!-- Setting width and height, padding, margin, works just like block element! -->
+    <!-- e.g., img, form elements, video, audio, iframe, etc.  -->
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiIahU4u8dG2p90_UD5dR-cNop0vgHr-eNiw&s"
+      alt=""
+    />
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiIahU4u8dG2p90_UD5dR-cNop0vgHr-eNiw&s"
+      alt=""
+    />
+
+    <!-- Empty image -->
+    <img src="" alt="" />
+    <!-- Empty image with alt text -->
+    <img src="" alt="Empty" />
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02-Display - Inline Element</title>
+    <style>
+      .box {
+        width: 400px;
+        height: 400px;
+        border: 1px solid red;
+      }
+
+      /* Note: the strong may have border and padding but we will notice that the vertical padding and border doesn't change the layout by pushing surrounding lines away. */
+      strong {
+        /* Setting width and height has no effect on inline elements */
+        width: 1000px;
+        height: 1000px;
+
+        /* Horizontal padding works normally. 
+     Vertical padding is rendered visually but doesn't affect line height 
+     or push surrounding lines away. */
+        padding: 20px;
+
+        /* Horizontal margin works normally. 
+     Vertical margin is kept in computed styles but completely ignored 
+     (no visual or layout effect). */
+        margin: 20px;
+
+        /* Horizontal border works normally. 
+     Vertical border is rendered visually but doesn't affect line height 
+     or push surrounding lines away. */
+        border: 10px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Flow layout / Normal flow -->
+
+    <div class="box">
+      <!-- Outer display type: inline -->
+      <!-- 1. inline elements flow horizontally (on same line) -->
+      <!-- 2. width/height are ignored -->
+      <!-- 3. only horizontal margin/padding affect layout; vertical margin ignored, vertical padding/border visible but don't affect flow -->
+      <!-- 4. wraps to next line when container width exceeded -->
+      <span
+        >Lorem ipsum dolor sit amet.<span
+          >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
+          doloribus.</span
+        ></span
+      >
+      <strong>Lorem ipsum dolor sit amet.</strong>
+      <i>Lorem ipsum dolor sit amet.</i>
+    </div>
+
+    <!-- It is generally not advisable to put replaced element inside span. -->
+    <!-- <span><img src="" alt=""></span> -->
+
+    <!-- Exception: <a> element cannot have another <a> element -->
+    <!-- <a href=""><a href=""></a></a> -->
+
+    <!-- Do not put block element in inline element -->
+    <!-- <span><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cumque eaque, accusamus obcaecati ad ex, earum ipsam suscipit quas, esse ducimus qui! Impedit asperiores sint id quae nisi dolorem voluptates.</div></span> -->
+  </body>
+</html>

@@ -192,10 +192,115 @@ Examples:
 
 ## Display
 
-### 1. Usage
+- Set the type of box (inline / block) and the layout the box will participate
+- Specify the outer display type and inner display type.
+  - Outer display type: the role of element in the layout (inline / block)
+  - Inner display type: the layout of children (flow, flow-root, flex, grid, table etc.)
+- Common Use Value:
+  - `block`
+  - `inline`
+  - `inline-block`
+  - `flex`
+  - `grid`
+  - `none`: do not display. The element and its children do not display on the page, as if they didn`t exist.
 
-### 2. Explicity Display Types
+```css
+div {
+  /* Single keywords - Precomposed */
+  /* display: block; */
+  /* display: inline; */
+  /* display: flex; */
+  /* display: grid; */
+  /* display: inline-block; */
+  /* display: inline-flex; */
+  /* display: inline-grid; */
 
-### 3. Conversion of Display Types
+  /* Multiple keywords: <display-outside> <display-inside>*/
+  /* display: inline flow-root;  */
+  /* display: inline flex; */
+  /* display: inline grid; */
 
-### 4. Hiding Element
+  /* Other keywords: */
+  /* display: table; */
+  /* display: list-item; */
+  /* etc. */
+  
+}
+```
+
+**Display: none vs Visibility: hidden**
+
+| Difference            | Display: none                                                        | Visibility: hidden                                                                    |
+| --------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Occupies Space        | no (Element removed from layout)                                     | yes (space preserved, invisible but present)                                          |
+| Reflow (Layout Shift) | yes (layout has shifted)                                             | no  (space preserved)                                                                 |
+| Repaint               | yes                                                                  | yes                                                                                   |
+| Affect Child          | Do not display children, there's no way to make child display again. | Hide all children, but adding `visibility: visible` to children can make them visible |
+
+
+**Understanding block box:**
+
+> e.g., `<div>`, `<h1>`, `<p>`, etc.
+
+1. Block elements stack vertically
+2. Width and height can be set
+  - If width is not set, defaults to 100% of parent's content area width
+  - If height is not set, expands to fit content (follows the children)
+3. Respects all box model properties (margin, padding, border)
+4. Vertical margin collapse
+5. Gap between siblings decided by margin
+6. Any elements can be put inside block elemnet.
+  - **Exception**: text related element cannot have other block elements as children.
+   - `<p>` element cannot have `<p>` and `<div>`.
+   - `<h1>` - `<h6>` element cannot have `<p>` and `<div>`. 
+
+**Understanding inline box:**
+
+> e.g., `<span>`, `<strong>`, `<i>`, etc.
+
+1. Inline elements flow horizontally (on the same row)
+2. Width/height are ignored - adjust size using `font-size`, `line-height`, `padding`, `font-family`, etc. 
+3. Only horizontal margin/padding affect layout; vertical margin ignored, vertical padding/border visible but don't affect flow
+4. Wraps to next line when container width exceeded
+5. Use `vertical align` to align the inline element vertically.
+6. Use `text-align` on parent to align the inline elements inside the parent horizontally.
+7. Inline element may contain text or other inline level element (Inline-block element is not recommened although it is valid).
+  - **Exception**: 
+    - `<a>` element cannot put another `<a>` element as child.
+    - `<a>` element allows block element.
+
+**Best Practice:**
+1. Convert `<a>` element to block element.
+2. Do not use `<span>` to wrap replaced element.
+3. Do not use `<span>` to wrap other block element.
+
+
+**Understanding inline-block box:**
+
+- Combination of block box and inline box.
+- Like block boxes, width, height, padding, margin and border can be set.
+- Like inline boxes, inline-block box flows horizontally (on the same row)
+- Inline-block element may contain text or other inline-level element (block box is not recommended even though it is valid).
+
+> Note: some replaced elements like `<img />` behave like inline-block box but they are actually inline box. 
+
+
+**Problem with inline-level boxes (inline box & inline-block box)**
+- White space collapsing causes gap between these inline-level boxes.
+- White spaces / new lines collapses into a single space.
+- Solutions:
+  1. Set parent font-size to 0, set children font-size back to default font-size.
+  2. Use float on individual children and clear float on parent.
+     1. clear floats using BFC e.g., set `overflow:hidden` on parent
+     2. define a clearfix class using pseudo element `::after`
+     ```css
+      .clearfix::after {
+        content:"";
+        display:block;
+        clear:both;
+      }
+
+     ``` 
+
+> For img element, we can use the aforementioned method to deal with the whitespace issue.
+> Best practice: set img element as block element.

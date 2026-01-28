@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06-Display: none</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+        background-color: skyblue;
+      }
+
+      .child {
+        width: 50px;
+        height: 50px;
+        background-color: tomato;
+      }
+
+      .none {
+        /* Do not display the element, the element will not occupy space on the page, 
+           as if the element didn't exist.
+           The child elements inside the element will also not display. 
+        */
+        display: none;
+      }
+
+      .invisible {
+        /* Hide element, the element still occupy the space. */
+        /* visibility: hidden; */
+        visibility: hidden;
+      }
+
+      .visible {
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box none">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+    <div class="box invisible">
+      <div class="child"></div>
+      <!-- Note: We can make child visible too, even though the parent is still invisible! -->
+      <div class="child visible"></div>
+      <div class="child"></div>
+    </div>
+  </body>
+</html>

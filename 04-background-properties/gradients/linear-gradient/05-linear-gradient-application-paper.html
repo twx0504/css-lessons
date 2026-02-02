@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-Linear Gradient Application: Paper</title>
+    <style>
+      .page {
+        width: 500px;
+        height: 600px;
+        padding: 0px 20px;
+        border: 1px solid red;
+        background-image:
+          /* Set the line -> imagine total height of line is 50px, 49px is transparent, the last 1px is the gray color. */
+          linear-gradient(to bottom, transparent 49px, #ddd 49px),
+          /* Set the background of paper */
+          linear-gradient(
+              to bottom,
+              rgb(252, 232, 236),
+              white,
+              rgb(252, 232, 236)
+            );
+        background-size:
+          auto 50px,
+          /* Set the line size */ auto; /* Set the paper size */
+
+        background-clip:
+          content-box /* We only want the line appear in content-box */,
+          padding-box /* Paper remains padding-box */;
+      }
+
+      h1, p {
+        margin: 0;
+        line-height: 50px;
+      }
+
+     
+    </style>
+  </head>
+  <body>
+    <div class="page">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+  </body>
+</html>

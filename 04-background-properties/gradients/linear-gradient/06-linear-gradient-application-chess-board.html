@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06-Linear Gradient Application: Chess Board</title>
+    <style>
+      .chessboard {
+        /* Width and Height must subtract 1px each otherwise, there's one extra px introduced by line drawn using linear gradient*/
+        width: 399px;
+        height: 399px;
+        border: 3px solid #654321;
+        background-color: #deb887;
+        background-image:
+          linear-gradient(to bottom, transparent 39px, #654321),
+          /* Horizontal line */
+          linear-gradient(to right, transparent 39px, #654321); /* Vertical line */
+        /* We must control the size of line */
+        background-size:
+          auto 40px,
+          40px auto;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chessboard"></div>
+  </body>
+</html>

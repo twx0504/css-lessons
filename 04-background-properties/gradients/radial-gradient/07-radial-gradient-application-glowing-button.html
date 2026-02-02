@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07-Radial Gradient Application: Glowing Button</title>
+    <style>
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .glowing-button {
+        width: 120px;
+        height: 40px;
+        background-color: rgb(14, 67, 88);
+        display: block;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        border-radius: 5px;
+      }
+
+      .glowing-button:hover {
+        background-image: radial-gradient(
+          circle at top center,
+          rgba(255, 255, 255, 0.4),
+          transparent
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <a class="glowing-button" href="">Glowing Button</a>
+  </body>
+</html>

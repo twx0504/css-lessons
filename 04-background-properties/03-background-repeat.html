@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-Background Repeat</title>
+    <style>
+      .box {
+        width: 600px;
+        height: 600px;
+        border: 1px solid;
+        background-image: url(./images/01.png);
+        background-size: 200px;
+
+        /* Repeat in x and y direction (Default) */
+        /* background-repeat: repeat; */
+
+        /* No repeat */
+        background-repeat: no-repeat;
+
+        /* Repeat in x direction */
+        /* background-repeat: repeat-x; */
+
+        /* Repeat in y direction */
+        /* background-repeat: repeat-y; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

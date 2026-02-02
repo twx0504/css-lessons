@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-Radial Gradient - Basic</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+        border: 1px solid green;
+      }
+
+      .box1 {
+        /* 
+        1. Simple: radial-gradient(start-color, ..., end-color);
+        - note: you can specify any number of colors between.
+        - the first color specified will start from innermost.
+        */
+        background-image: radial-gradient(red, yellow, blue);
+      }
+
+      .box2 {
+        /* 
+        2. Color Stops: radial-gradient(start-color color-stop, ..., end-color, color-stop);
+        - if 0% is not specified, the color will be the start-color
+        - if 100% is not specified, the end-color extends to 100%
+        */
+        background-image: radial-gradient(red 10%, yellow 50%, blue);
+      }
+
+      .box3 {
+        /* 
+        3. Color hint
+        */
+        background-image: radial-gradient(red 10%, 40%, yellow 50%, 90%, blue);
+      }
+
+      .box4 {
+        /* 
+        4. Multiple Color Stops
+        */
+        background-image: radial-gradient(red 10% 50%, yellow 51% 70%, blue 71%);
+        /* Equivalent to:
+            - Note: red 40% - yellow 50%, between them there's a transition, that's why you will see the color becomes blurry.
+            - Note: red 50% - yellow 50%, this will have clear distinction between both colors, there's no transition.
+            - Generally, we willl use red 50% - yellow 51% to achieve anti-aliasing effect.
+        */
+        /* background-image: radial-gradient(red 10%, red 40%, yellow 50%, yellow, 70%, blue); */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+  </body>
+</html>

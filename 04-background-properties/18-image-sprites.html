@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>18-Image Sprites</title>
+    <style>
+      body,
+      p {
+        margin: 0;
+      }
+      p span {
+        vertical-align: middle;
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        background-image: url(./images/image-sprites.png);
+        /* Use background position to locate the icon we need. */
+        /* Note: We can use negative value in background position! */
+        background-position: -92px -167px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="box"><span></span>Facebook</p>
+  </body>
+</html>

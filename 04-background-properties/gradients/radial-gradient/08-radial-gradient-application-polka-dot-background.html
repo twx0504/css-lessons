@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>08-Radial Gradient Application: Polka Dot Background</title>
+    <style>
+      .polka-dot-background {
+        width: 800px;
+        height: 200px;
+        border: 1px solid red;
+        background-image: radial-gradient(
+          circle at center,
+          #666 2px,
+          /* If transparent set at 2px, there's will be aliasing. */
+          transparent 3px 
+        );
+
+        /* Make the background size 20px 20px */
+        background-size: 20px 20px;
+        /* We enable default background-repeat */
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="polka-dot-background"></div>
+  </body>
+</html>

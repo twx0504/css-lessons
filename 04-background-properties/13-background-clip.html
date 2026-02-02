@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13-Background Clip</title>
+    <style>
+      body {
+        display: flex;
+      }
+      /*
+        background-origin controls WHERE the background image starts painting.
+        background-clip controls WHERE the painted background is allowed to be visible.
+
+        Defaults:
+        - background-origin: padding-box;
+        - background-clip: border-box;
+
+        Because the image starts painting from the padding box by default,
+        switching background-clip between border-box and padding-box may look the same
+        when:
+          - background-repeat: no-repeat; and
+          - the image does not extend into the border area.
+
+        In that case, background-clip only changes the allowed visible area,
+        but no background is actually painted in the clipped region.
+
+        background-clip: content-box behaves differently:
+        - The image is still painted starting from the padding box,
+        - But any part painted in the padding area is clipped (hidden),
+          leaving only the content area visible.
+
+        To clearly see the difference between background-clip values:
+        - Make sure the border is translucent.
+        - Change background-origin (e.g. border-box),
+        - Or allow background-repeat,
+        - Or use a background-size that causes the image to extend beyond padding.
+      */
+      .box {
+        width: 200px;
+        height: 200px;
+        /* Make sure the border is translucent to see the effect.. */
+        border: 50px solid rgba(0, 0, 0, 0.5);
+        margin: 50px;
+        padding: 50px;
+        background-image: url(./images/01.png);
+        /* To see the effect, we will not enable background-repeat: no-repeat; so that the image can extend outside border area.*/
+      }
+
+      .border {
+        background-clip: border-box;
+      }
+      .padding {
+        background-clip: padding-box;
+      }
+      .content {
+        background-clip: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Default: background-clip: border-box; -->
+    <div class="box"></div>
+    <!-- background-clip: border-box; -->
+    <div class="box border"></div>
+    <!-- background-clip: padding-box; -->
+    <div class="box padding"></div>
+    <!-- background-clip: content-box; -->
+    <div class="box content"></div>
+  </body>
+</html>

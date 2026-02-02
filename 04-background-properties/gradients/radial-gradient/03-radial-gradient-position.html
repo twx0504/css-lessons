@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-Radial Gradient - Position</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 200px;
+        border: 1px solid green;
+      }
+
+      /* Position: radial-gradient(shape at x y, start-color, ..., end-color);
+          - x & y is specified similar to background-position
+      */
+
+      .box1 {
+        /* 
+          Ellipse        
+        */
+
+        background-image: radial-gradient(
+          ellipse at 50% 10%,
+          red,
+          yellow,
+          blue
+        );
+      }
+
+      .box2 {
+        /* 
+        2. Circle
+        */
+        background-image: radial-gradient(
+          circle at 100px 200px,
+          red,
+          yellow,
+          blue
+        );
+      }
+
+      .box3 {
+        /* 3. Keyword */
+        background-image: radial-gradient(
+          circle at right center,
+          red,
+          yellow,
+          blue
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+  </body>
+</html>

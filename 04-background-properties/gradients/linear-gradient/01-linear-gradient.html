@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-Linear Gradient</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+      }
+
+      .box1 {
+        /* 
+        1. Simple: linear-gradient(start-color, ..., end-color);
+        - note: you can specify any number of colors between.
+        */
+        background-image: linear-gradient(red, orange);
+      }
+
+      .box2 {
+        /* 
+        2. Direction / Angle: linear-gradient(direction, start-color, ..., end-color);
+        - keyword: to top, to bottom, to left, to right
+        - angle: positive angle (clockwise), negative angle (anti-clockwise)
+        */
+        background-image: linear-gradient(-45deg, red, orange, cyan, purple);
+        /* background-image: linear-gradient(to left, red, orange, cyan, purple); */
+      }
+
+      .box3 {
+        /* 3. Color Stop: linear-gradient(start-color color-stop, ..., end-color, color-stop);
+        - if color stop 0% is not specified, it will use the start-color to fill 0%.
+        - if the end-color's color stop is not specified, or specified with value other than 100%, the end-color will continue to 100%.
+        */
+        /* background-image: linear-gradient(red 0%, orange 25%, cyan 75%, purple 100%); */
+        /* background-image: linear-gradient(red 40%, orange 25%, cyan 75%, purple 100%); */
+        /* background-image: linear-gradient(red 40%, orange 25%, cyan 50%, purple); */
+        background-image: linear-gradient(
+          red 40%,
+          orange 25%,
+          cyan 50%,
+          purple 80%
+        );
+      }
+
+      .box4 {
+        /* 
+        - Initial, the color transition happens at 25% (blue -> yellow)
+        and 75% (yellow -> red)
+
+        - blue --25%-- yellow --75%-- red
+        */
+        background-image: linear-gradient(to right, blue, yellow, red);
+      }
+
+      .box5 {
+        /* 4. Color hint
+        - Specify a color stop without color, we are setting where this transition happens.
+        */
+
+        background-image: linear-gradient(
+          to right,
+          blue,
+          45%,
+          /* Without specifying color, the blue-yellow transition point is at 45% */
+          yellow,
+          50%,
+          /* Without specifying color, the blue-yellow transition point is at 55% */
+          red
+        );
+      }
+
+      /* 5. Multiple Color Stops */
+      .box6 {
+        background-image: linear-gradient(
+          to right,
+          blue 10%,
+          yellow 50%,
+          red 80%
+        );
+      }
+
+      .box7 {
+        /* When end-color-stop of one color is the same as the start-color-stop of another color, there's no transition happens. */
+        background-image: linear-gradient(
+          to right,
+          blue 10% 40%,
+          yellow 50% 80%,
+          red 80%
+        );
+      }
+
+      .box8 {
+        /* This is equivalent to the linear gradient in .box7 */
+        background-image: linear-gradient(
+          to right,
+          blue 0%,
+          blue 10%,
+          blue 40%,
+          yellow 50%,
+          yellow 80%,
+          red 80%,
+          red 100%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+
+    <p>Change Color Transition Point</p>
+    <!-- Change color transition point -->
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+
+    <p>Multiple Color Stops</p>
+    <div class="box box6"></div>
+    <div class="box box7"></div>
+    <div class="box box8"></div>
+  </body>
+</html>

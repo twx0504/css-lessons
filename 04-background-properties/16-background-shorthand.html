@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>16-Background Shorthand</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        border: 50px solid rgba(0, 0, 0, 0.3);
+        padding: 50px;
+        /* If there's other background properties didn't specify, browser will use default. */
+        /* Note: content-box is set, background-color and background-image will be starting from the content-box. */
+        background:  url(./images/01.png) no-repeat left center / 100px
+          100px border-box skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

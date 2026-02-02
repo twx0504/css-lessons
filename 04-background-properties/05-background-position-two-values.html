@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-Background Position - Two Values</title>
+    <style>
+      /* Syntax: background-position: x y */
+      /* Note: using keywords, the order may not be important as browsers can reorder it. */
+      /* Note: Specify two keywords that are in the same coordinate is invalid */
+      /* background-position: top right; */
+
+      .box {
+        width: 500px;
+        height: 500px;
+        border: 1px solid red;
+        background-repeat: no-repeat;
+        background-size: 200px 200px;
+        background-image: url(./images/01.png);
+      }
+
+      .center {
+        background-position: 50% 50%;
+      }
+
+      .top-right {
+        background-position: right top;
+      }
+
+      .mix {
+        padding: 100px;
+        /* Note: <length> or <percent> must follow the order, even if they are paired with keyword. */
+        /* Note: the background image is starting from padding box (inside border) */
+        /* x-offset = 50% * (700px - 200px) = 250px */
+        /* This offset is starting from the edge of the container (padding box) to the edge of the image */
+        /* Note: when using laptop software like lightshot or sharedX to measure, the value is not accurate. */
+        /* - Possible reasons: laptop display is set to 125% by default. & browser zoom in or out.  */
+        background-position: 50% bottom;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Default: top left or 0% 0% or 0px 0px -->
+    <div class="box"></div>
+    <div class="box center"></div>
+    <div class="box top-right"></div>
+    <div class="box mix"></div>
+  </body>
+</html>

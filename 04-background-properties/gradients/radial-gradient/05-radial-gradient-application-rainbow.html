@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-Rdial Gradient Application: Rainbow</title>
+    <style>
+      .rainbow {
+        width: 600px;
+        height: 300px;
+        border: 1px solid red;
+        background-image: radial-gradient(
+          circle farthest-side at center bottom,
+          white 40%,
+          pink 50%,
+          pink 55%,
+          red 60%,
+          red 65%,
+          orange 70%,
+          orange 75%,
+          skyblue 80%,
+          skyblue 85%,
+          yellow 90%,
+          yellow 100%,
+          transparent
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rainbow"></div>
+  </body>
+</html>

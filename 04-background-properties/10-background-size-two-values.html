@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10-Background Size: Two Values</title>
+    <style>
+      /* Two values syntax:
+        - background-size: width height;
+        - Note: The aspect ratio of the image is messed up only if BOTH values are non-auto.
+      */
+      .box1 {
+        width: 700px;
+        height: 700px;
+        border: 1px solid red;
+        background-image: url(./images/01.png);
+        background-repeat: no-repeat;
+        background-size: 300px 500px;
+      }
+      .box2 {
+        width: 700px;
+        height: 700px;
+        border: 1px solid red;
+        background-image: url(./images/01.png);
+        background-repeat: no-repeat;
+        /* size = 75% * 700 = 525px */
+        /* Set width to auto, so width will scale according to height and keep its aspect ratio. */
+        background-size: auto 75%;
+      }
+
+      .box3 {
+        width: 700px;
+        height: 700px;
+        border: 1px solid red;
+        background-image: url(./images/01.png);
+        background-repeat: no-repeat;
+
+        /* width = 25% * 700 = 175px */
+        /* height = 70% * 700 = 490px */
+        background-size: 25% 70%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+  </body>
+</html>

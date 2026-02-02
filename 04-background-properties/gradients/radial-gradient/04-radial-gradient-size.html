@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04-Radial Gradient - Size</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 200px;
+        border: 1px solid green;
+      }
+
+      /* Size:
+      - radial-gradient(shape size at x y, start-color, ..., end-color);
+      - Specify how far should the gradient expand from origin / position (x, y) before the last color stop.
+      - e.g., farthest-side -> expands from x y until it touches the most distant edge of the box.
+
+      */
+
+      .box1 {
+        /* 
+          1. farthest-corner (Default): the gradient expands from the origin to the farthest corner of the gradient box.
+          - This is also the default if size is not specified.
+        */
+
+        background-image: radial-gradient(
+          ellipse farthest-corner at 50px 10px,
+          red,
+          yellow,
+          blue
+        );
+      }
+
+      .box2 {
+        /* 
+          2. closest-side: the gradient expands from the origin to the nearest side of the gradient box.
+          - Stops when it touches the closest edge.
+        */
+        background-image: radial-gradient(
+          ellipse closest-side at 50px 10px,
+          red,
+          yellow,
+          blue 100%,
+          /* We make sure the last color specified 100% */
+          /* Make sure the rest of the space is filled with transparent. */
+          transparent
+        );
+      }
+
+      .box3 {
+        /* 
+          3. closest-corner: the gradient expands from the origin to the nearest corner of the gradient box.
+          - Stops when it touches the closest corner.
+        */
+        background-image: radial-gradient(
+          ellipse closest-corner at 50px 10px,
+          red,
+          yellow,
+          blue 100%,
+          /* We make sure the last color specified 100% */
+          /* Make sure the rest of the space is filled with transparent. */
+          transparent
+        );
+      }
+
+      .box4 {
+        /* 
+          4. farthest-side: the gradient expands from the origin to the farthest side of the gradient box.
+          - Stops when it touches the farthest edge.
+        */
+        background-image: radial-gradient(
+          ellipse farthest-side at 50px 10px,
+          red,
+          yellow,
+          blue 100%,
+          /* We make sure the last color specified 100% */
+          /* Make sure the rest of the space is filled with transparent. */
+          transparent
+        );
+      }
+
+      /* Despite keywords, we can also specify value. */
+      .box5 {
+        /* 5. Circle with explicit radius
+          - radial-gradient(circle radius at x y, start-color, ..., end-color)
+          - The gradient expands as a circle with radius = 50px from the origin (50px 10px)
+        */
+        background-image: radial-gradient(
+          circle 50px at center,
+          red,
+          yellow,
+          blue 100%,
+          /* We make sure the last color specified 100% */
+          /* Make sure the rest of the space is filled with transparent. */
+          transparent
+        );
+      }
+
+      /* Despite keywords, we can also specify value. */
+      .box6 {
+        /*
+          6. Ellipse with percentage sizes:
+            - radial-gradient(ellipse width% height% at x y, start-color, ..., end-color)
+            - First % is relative to the container width, second % is relative to the container height.
+            - Circle cannot use % because it's unclear whether the % refers to width or height.
+         */
+
+        background-image: radial-gradient(
+          ellipse 50% 10% at center,
+          red,
+          yellow,
+          blue 100%,
+          /* We make sure the last color specified 100% */
+          /* Make sure the rest of the space is filled with transparent. */
+          transparent
+        );
+      }
+
+      .box7 {
+        /* 7. Ellipse with explicit radii
+        - radial-gradient(ellipse radiusX radiusY at x y, start-color, ..., end-color)
+        - The gradient expands as an ellipse with horizontal radius = 100px and vertical radius = 50px from the origin (center)
+       */
+        background-image: radial-gradient(
+          ellipse 100px 50px at center,
+          red,
+          yellow,
+          blue 100%,
+          /* We make sure the last color specified 100% */
+          /* Make sure the rest of the space is filled with transparent. */
+          transparent
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+    <div class="box box6"></div>
+    <div class="box box7"></div>
+  </body>
+</html>

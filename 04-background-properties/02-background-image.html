@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02-Background Image</title>
+    <link rel="stylesheet" href="./css/bg-image.css">
+    <style>
+      /* single background image */
+      /* Note: Path is relative to the current file. */
+      /* background-image: url() */
+      .box {
+        width: 200px;
+        height: 200px;
+        background-image: url(./images/01.png);
+      }
+
+      /* background-color can also specify multiple images */
+      /* background-color: url(), url(), url(), ... */
+      .box2 {
+        width: 200px;
+        height: 200px;
+        background-size: contain;
+        background-image:
+          url(./images/lantern.png), url(./images/butterfly.avif);
+      }
+
+      /* background-color also supports gradient */
+
+      .box3 {
+        width: 200px;
+        height: 200px;
+        background-size: contain;
+        background-image:
+          url(./images/lantern.png),
+          radial-gradient(circle, transparent 45%, black 48%),
+          radial-gradient(ellipse farthest-corner, #fc1c14 20%, #cf15cf 80%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <!-- This class is coming from bg-image.css -->
+    <div class="bg-image"></div>
+  </body>
+</html>

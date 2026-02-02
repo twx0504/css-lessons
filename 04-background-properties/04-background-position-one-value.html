@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04-Background Position - One Value</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .keyword,
+      .percent,
+      .length {
+        display: flex;
+      }
+
+      .keyword .box {
+        background-image: url(./images/01.png);
+      }
+
+      .percent .box {
+        background-size: 200px;
+        background-image: url(./images/lantern.png);
+      }
+
+      .length .box {
+        background-size: 200px;
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmi2_j63C0eIB0PJZKK0_mqsndbtAGt6lsfw&s);
+      }
+
+      .box {
+        width: 500px;
+        height: 500px;
+        border: 1px solid blue;
+        /* Do not repeat */
+        background-repeat: no-repeat;
+      }
+
+      .keyword .center {
+        /* 1. Centering */
+        /* background-position: 50% 50%; */
+        background-position: center;
+      }
+
+      /* 2. top left bottom right */
+      /* Note: */
+      /* - top & bottom = y-direction */
+      /* - left & right = x-direction */
+      /* - Specify one of them, the other direction is automatically set to 50% */
+      /* - Example, background-position: top; === background-position: 50% top; */
+      /* - Example, background-position: left; === background-position: left 50%; */
+
+      /* background-position: top; */
+      /* background-position: left; */
+      /* background-position: bottom; */
+      /* background-position: right; */
+
+      .keyword .top {
+        background-position: top;
+      }
+
+      .keyword .left {
+        background-position: left;
+      }
+
+      .keyword .bottom {
+        background-position: bottom;
+      }
+
+      .keyword .right {
+        background-position: right;
+      }
+
+      /* Percentage / Length: */
+      /* - One value specifies the x-coordinate relative to the left edge. */
+      /* - y-coordinate is set to 50% */
+      .percent .center {
+        background-position: 50%;
+      }
+
+      .percent .left {
+        background-position: 0%;
+      }
+
+      .percent .right {
+        background-position: 100%;
+      }
+
+      .length .center {
+        /* To center the image, 
+        totalRemainingSpace = (containerWidth - imageWidth)
+        eachSideSpace = totalRemainingSpace / 2
+        */
+
+        /* That's a catch!
+            - 100% here is not the containerWidth 500px directly!!!
+            - offset = (containerWidth - imageWidth) * percent where percent = 100%
+            - offset = (500 - 200) * 100% = 300px
+            - then calc((300px - 200px) / 2) = 50px! (That's why it is not centering)
+        */
+        /* background-position: calc((100% - 200px) / 2); */
+
+        /* Using px has no problem here. */
+        background-position: calc((500px - 200px) / 2);
+      }
+
+      .length .left {
+        background-position: 0px;
+      }
+
+      .length .right {
+        background-position: calc(500px - 200px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="keyword">
+      <div class="box center"></div>
+      <div class="box top"></div>
+      <div class="box left"></div>
+      <div class="box bottom"></div>
+      <div class="box right"></div>
+    </div>
+    <div class="percent">
+      <div class="box center"></div>
+      <div class="box right"></div>
+      <div class="box left"></div>
+    </div>
+    <div class="length">
+      <div class="box center"></div>
+      <div class="box left"></div>
+      <div class="box right"></div>
+    </div>
+  </body>
+</html>

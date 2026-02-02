@@ -1,0 +1,7 @@
+.bg-image {
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    /* Note: the relative path is starting from this css file */
+    background-image: url(../images/lantern.png);
+}

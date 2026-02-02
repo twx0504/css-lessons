@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>14-Background Clip: Text</title>
+    <style>
+      .box {
+        font-size: 130px;
+        background-image: url(./images/01.png);
+        /* Make sure the font color is translucent. */
+        color: rgba(0, 0, 0, 0.2);
+
+        /* For compatibility: */
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Lorem ipsum dolor sit amet.</div>
+  </body>
+</html>

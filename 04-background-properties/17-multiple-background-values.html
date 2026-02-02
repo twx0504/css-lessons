@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17-Multiple Background Values</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 2px solid red;
+            /* We can use comma to specify multiple images. */
+            /* Most background-related image allows us to write multiple set of values. */
+            
+            background-image: url(./images/01.png), url(./images/04.png), url(./images/21.png);
+            /* Use the first value if we don't specify value for third image, this is applicable to other background properties, and latter background-images.  */
+            background-repeat: no-repeat, repeat-x; /* Third image is no-repeat, use the first value. */
+            background-size: 100px 100px, 150px 150px, 200px;
+            background-position: top, bottom, right;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

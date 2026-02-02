@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>15-Background Origin</title>
+    <style>
+        body {
+            display: flex;
+        }
+      .box {
+        width: 200px;
+        height: 200px;
+        padding: 50px;
+        margin: 50px;
+        border: 50px solid rgba(0, 0, 0, 0.5);
+        background-image: url(./images/01.png);
+        background-size: 25%;
+        background-repeat: no-repeat;
+      }
+
+      .border {
+        background-origin: border-box;
+      }
+
+      .padding {
+        background-origin: padding-box;
+      }
+
+      .content {
+        background-origin: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Default: background-origin: padding-box; -->
+    <div class="box"></div>
+    <!-- background-origin: padding-box; -->
+    <div class="box padding"></div>
+    <!-- background-origin: border-box; -->
+    <div class="box border"></div>
+    <!-- background-origin: content-box; -->
+    <div class="box content"></div>
+  </body>
+</html>

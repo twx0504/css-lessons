@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-Conic Gradient Application: Loading Spinner</title>
+    <style>
+      body {
+        background-color: black;
+      }
+
+      .container {
+        margin: 50px auto;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        border: 16px solid #333;
+        border-radius: 50%;
+      }
+
+      .loading-spinner {
+        position: absolute;
+        /* Make sure the loading spinner extends to the outer edge of the border. */
+        top: -16px;
+        bottom: -16px;
+        left: -16px;
+        right: -16px;
+        background-image: conic-gradient(
+          from 0deg,
+          #32c5a9,
+          transparent 40%,
+          transparent
+        );
+        border-radius: 50%;
+        /* transform-origin: 50% 50%; */
+        animation: rotate 3s ease-in-out infinite;
+      }
+
+      /* Mask */
+      .loading-spinner::before {
+        content: "";
+        position: absolute;
+        top: 16px;
+        bottom: 16px;
+        left: 16px;
+        right: 16px;
+        background-color: black;
+        border-radius: 50%;
+      }
+
+      /* Little ball */
+      .loading-spinner::after {
+        content: "";
+        width: 16px;
+        position: absolute;
+        height: 16px;
+        top: 0;
+        /* Horizontal centering */
+        left: 50%;
+        transform: translate(-50%, 0px);
+        background-color: white;
+        box-shadow: 0 0 4px 2px rgb(108, 199, 241);
+        border-radius: 50%;
+      }
+
+      /* Rotate the loading-spinner as a whole so the little ball can follow.*/
+      @keyframes rotate {
+        100% {
+          transform: rotate(-360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="loading-spinner"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-Conic Gradient</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+      }
+      .box1 {
+        /* 
+        1. Simple: conic-gradient(start-color, ..., end-color);
+        - note: you can specify any number of colors between.
+        */
+
+        background-image: conic-gradient(red, yellow, blue);
+      }
+      .box2 {
+        /* 
+        2. Angle: conic-gradient(from angle, start-color, ..., end-color);
+        */
+        background-image: conic-gradient(from 45deg, red, yellow, blue);
+      }
+
+      .box3 {
+        /* 
+        3. Origin: conic-gradient(from angle at x y, start-color, ..., end-color);
+        - x y can be values, or keywords, like background-position.
+        - default: center center
+        */
+        /* background-image: conic-gradient(from 45deg at 50px 50px, red, yellow, blue); */
+        background-image: conic-gradient(
+          from 45deg at left center,
+          red,
+          yellow,
+          blue
+        );
+      }
+
+      .box4 {
+        /* 
+        4. Color Stops: conic-gradient(start-color color-stop, ..., end-color, color-stop);
+        - color-stop can be percentage / angle (deg)
+        - 1 turn = 360deg
+        - % relative to 1 turn (360deg)
+        - e.g., 50% = 50/100 * 360deg = 180deg
+        */
+        /* background-image: conic-gradient(
+          from 180deg,
+          red 180deg,
+          yellow 270deg,
+          blue
+        ); */
+        background-image: conic-gradient(
+          from 180deg,
+          red 50%,
+          /* 180deg */ yellow 75%,
+          /* 270deg */ blue
+        );
+      }
+
+      .box5 {
+        /* 
+        5. Multiple Color Stops
+        */
+        background-image: conic-gradient(red 50%, yellow 50% 75%, blue 75%);
+
+        /* Equivalent to: */
+        /* background-image: conic-gradient(
+          red 0%,
+          red 50%,
+          yellow 50%,
+          yellow 75%,
+          blue 75%,
+          blue 100%
+        ); */
+      }
+
+      .box6 {
+        /* 
+        5. Color hint
+        - Note: the default transition point is the midpoint between two color stops.
+        */
+        /* background-image: conic-gradient(red 50%, 55%, yellow 75%, blue 75%); */
+        background-image: conic-gradient(red 50%, 70%, yellow 75%, blue 75%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+    <div class="box box6"></div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>08-Background Size: keyword</title>
+    <style>
+        body {
+            display: flex;
+        }
+      .box1 {
+        width: 700px;
+        height: 700px;
+        border: 1px solid red;
+        background-image: url("https://plainenglish.com/wp-content/uploads/expressions/big-picture.png");
+        background-repeat: no-repeat; /* Without background-repeat: no-repeat;, the image will repeat. */
+        /* contain: show the whole img, no cropping allowed */
+        background-size: contain;
+      }
+      .box2 {
+        width: 700px;
+        height: 700px;
+        border: 1px solid red;
+        background-image: url("https://plainenglish.com/wp-content/uploads/expressions/big-picture.png");
+        background-repeat: no-repeat;
+        /* cover: fill the entire container, no empty space allowed, even if it means the image is getting cropped. */
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+  </body>
+</html>

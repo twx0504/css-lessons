@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02-Conic Gradient Application: Pie Chart</title>
+    <style>
+      .pie {
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+        /* We add about 0.3% to remove aliasing.
+            Note: 1% may be too much because 1% of 360 deg maybe 3.6deg, which may cause the boundary to be too blurry.
+        */
+        background-image: conic-gradient(
+          from 10deg,
+          pink 10%,
+          tomato 10.3% 45%,
+          skyblue 45.3% 70%,
+          yellow 70.3% 85%,
+          green 85.3% 100%
+        );
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pie"></div>
+  </body>
+</html>

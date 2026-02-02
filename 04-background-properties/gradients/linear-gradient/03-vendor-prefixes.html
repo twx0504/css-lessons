@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-Vendor Prefixes</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+
+        /* 
+        - Vendor Prefixes: Some older browsers require any of these prefixes to work.
+        - Properties with vendor prefixes should be written first.
+        - Properties without vendor prefixes comes last.
+            -webkit- (Chrome, Safari, newer versions of Opera and Edge, almost all iOS browsers including Firefox for iOS; basically, any WebKit or Chromium-based browser)
+            -moz- (Firefox)
+            -o- (old pre-WebKit versions of Opera)
+            -ms- (Internet Explorer and Microsoft Edge, before Chromium)
+        - Nowadays there are tool to add these prefixes for us. So, we can just write properties without prefixes.
+        */
+
+        /* If older browsers do not support linear-gradient, it will use the one with prefixes. */
+        background-image: -webkit-linear-gradient(to right, gold, red);
+        background-image: -moz-linear-gradient(to right, gold, red);
+        background-image: -ms-linear-gradient(to right, gold, red);
+        background-image: -o-linear-gradient(to right, gold, red);
+
+        /* Modern browsers support -> use this. */
+        background-image: linear-gradient(to right, gold, red);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

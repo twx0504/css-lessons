@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07-Background Position - Four Values</title>
+    <style>
+      /* Four-value syntax:
+        - background-position: keywordX offsetX keywordY offsetY;
+        - background-position: keywordY offsetY keywordX offsetX; (If you reverse the order)
+      */
+
+      .box1 {
+        width: 500px;
+        height: 500px;
+        border: 1px solid red;
+        background-image: url(./images/01.png);
+        background-repeat: no-repeat;
+        /* Similar to background-position: center; */
+        background-position: top 50% right 50%;
+      }
+
+      .box2 {
+        width: 500px;
+        height: 500px;
+        border: 1px solid red;
+        background-image: url(./images/01.png);
+        background-repeat: no-repeat;
+        background-position: right 25% top 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+  </body>
+</html>

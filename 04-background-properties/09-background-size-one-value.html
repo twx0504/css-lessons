@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>09-Background Size: One Value</title>
+    <style>
+      .box1 {
+        width: 700px;
+        height: 700px;
+        border: 1px solid red;
+        background-image: url(./images/01.png);
+        background-repeat: no-repeat;
+        background-size: auto;
+      }
+      .box2 {
+        width: 700px;
+        height: 700px;
+        border: 1px solid red;
+        background-image: url(./images/01.png);
+        background-repeat: no-repeat;
+        /* One value: height is set as auto. */
+        /* auto: calculate from the image intrinsic size, and scale it up or down to keep its aspect ratio. */
+        /* Similar to background-size: 300px auto; */
+        background-size: 300px;
+      }
+      .box3 {
+        width: 700px;
+        height: 700px;
+        border: 1px solid red;
+        background-image: url(./images/01.png);
+        background-repeat: no-repeat;
+        /* Similar to background-size: 25% auto */
+        /* percentage is relative to the container (box). */
+        /* size = 25% * 700 = 175px */
+        background-size: 25%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+  </body>
+</html>

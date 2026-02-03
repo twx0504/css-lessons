@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>08-Vertical Align Application: Vertically Centering</title>
+    <style>
+      p {
+        line-height: 50px;
+        border: 1px solid red;
+      }
+
+      p img {
+        
+        /* Note: This method cannot vertical aligns chinese text. */
+        vertical-align: middle;
+        
+        /* Solution: Use position to adjust. */
+        /* position: relative;
+        top: -3px; */
+      }
+
+      /* Modern solution: flex box - we don't need vertical align anymore and it also takes care of chinese text too. */
+      .box {
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p><img src="./fish.ico" alt="fish" />Lorem ipsum dolor sit amet.</p>
+    <p><img src="./fish2.ico" alt="fish" />Lorem ipsum dolor sit amet.</p>
+    <p class="box">
+      <img src="./fish2.ico" alt="fish" />Lorem ipsum dolor sit amet.
+    </p>
+  </body>
+</html>

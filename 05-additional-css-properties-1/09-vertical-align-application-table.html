@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>09-Vertical Align Application: Table</title>
+    <style>
+      table {
+        height: 100px;
+      }
+      table tr td {
+        border: 1px solid #000;
+      }
+
+
+      /* We usually align table data top, middle, bottom. */
+
+      /* baseline and top looks the same. */
+      .baseline {
+        vertical-align: baseline;
+      }
+
+      .top {
+        vertical-align: top;
+      }
+
+      .middle {
+        vertical-align: middle;
+      }
+
+      .bottom {
+        vertical-align: bottom;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td class="baseline">x-baseline</td>
+        <td class="top">x-top</td>
+        <td class="middle">x-middle</td>
+        <td class="bottom">x-bottom</td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07-Vertical Align</title>
+    <style>
+      .box {
+        height: 50px;
+        border: 1px solid red;
+        padding: 20px;
+        line-height: 50px;
+      }
+
+      .box span {
+        background-color: khaki;
+        border: 1px solid blue;
+        /* We need to set line-height here. Otherwise, it will inherit line-height from parent */
+        /* 1 * font-size = 1 * 16px = 16px */
+        line-height: 1;
+      }
+      .baseline {
+        vertical-align: baseline;
+      }
+
+      .sub {
+        vertical-align: sub; /* subscript */
+      }
+
+      .super {
+        vertical-align: super; /* superscript */
+      }
+
+      .text-top {
+        vertical-align: text-top;
+      }
+
+      .text-bottom {
+        vertical-align: text-bottom;
+      }
+
+      .middle {
+        vertical-align: middle;
+      }
+
+      .top {
+        vertical-align: top;
+      }
+
+      .bottom {
+        vertical-align: bottom;
+      }
+
+      .v10px {
+        vertical-align: 10px;
+      }
+      .v-10px {
+        vertical-align: -10px;
+      }
+
+      /* percentage is relative to line-height */
+      .percent50 {
+        vertical-align: 50%;
+      }
+
+      .percent-50 {
+        vertical-align: -50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      Lorem ipsum dolor sit amet. Xx
+      <span class="baseline">x-baseline</span>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, velit.
+    </div>
+    <div class="box">
+      Lorem ipsum dolor sit amet. Xx
+      <span class="sub">x-sub</span>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, velit.
+    </div>
+    <div class="box">
+      Lorem ipsum dolor sit amet. Xx
+      <span class="super">x-super</span>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, velit.
+    </div>
+    <div class="box">
+      Lorem ipsum dolor sit amet. Xx
+      <span class="text-top">x-text-top</span>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, velit.
+    </div>
+    <div class="box">
+      Lorem ipsum dolor sit amet. Xx
+      <span class="text-bottom">x-text-bottom</span>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, velit.
+    </div>
+    <div class="box">
+      Lorem ipsum dolor sit amet. Xx
+      <span class="middle">x-middle</span>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, velit.
+    </div>
+    <div class="box">
+      Lorem ipsum dolor sit amet. Xx
+      <span class="top">x-top</span>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, velit.
+    </div>
+    <div class="box">
+      Lorem ipsum dolor sit amet. Xx
+      <span class="bottom">x-bottom</span>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, velit.
+    </div>
+    <div class="box">
+      Lorem ipsum dolor sit amet. Xx
+      <span class="v10px">x-v10px</span>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, velit.
+    </div>
+    <div class="box">
+      Lorem ipsum dolor sit amet. Xx
+      <span class="v-10px">x-v-10px</span>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, velit.
+    </div>
+    <div class="box">
+      Lorem ipsum dolor sit amet. Xx
+      <span class="percent50">x-percent50</span>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, velit.
+    </div>
+    <div class="box">
+      Lorem ipsum dolor sit amet. Xx
+      <span class="percent-50">x-percent-50</span>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, velit.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02-Outline</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+        /* 
+            Outline:
+            1. Syntax similar to border
+            2. Do not occupy space
+             
+        */
+        outline: 50px solid rgba(0, 0, 0, 0.5);
+        /* border: 50px solid rgba(0, 0, 0, 0.5); */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <!-- Note: this text is appeared in outline. This is because outline takes no space. -->
+    Lorem ipsum dolor sit amet.
+  </body>
+</html>

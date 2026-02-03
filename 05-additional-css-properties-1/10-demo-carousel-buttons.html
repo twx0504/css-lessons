@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10-Demo: Carousel Buttons</title>
+    <style>
+      .buttons {
+        width: 600px;
+        height: 50px;
+        /* We need to vertically center text, although there's no text here. */
+        line-height: 50px;
+        text-align: center;
+        background-color: skyblue;
+        font-size: 0;
+      }
+
+      .buttons span {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+        background-color: #fff;
+        border-radius: 50%;
+        /* Here, in order for vertical-align to work, we need to specify line-height on parent. */
+        vertical-align: middle;
+        /* Since span here don't have text, so we don't set the font size */
+        /* font-size: 16px; */
+        cursor: pointer;
+      }
+
+      /* Hover state */
+      .buttons span:hover {
+        background-color: tomato;
+      }
+
+      /* Let's say a button is clicked */
+      .buttons span.active {
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="buttons">
+      <span class="active"></span><span></span><span></span><span></span
+      ><span></span>
+    </div>
+  </body>
+</html>

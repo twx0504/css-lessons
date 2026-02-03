@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-Outline Application</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: khaki;
+        margin: 5px;
+      }
+
+      .box:hover {
+        /* border: 5px solid red; */
+
+        /* This will not cause the layout shift. */
+        outline: 5px solid red;
+      }
+
+      input {
+        /* outline: 5px solid red; */
+
+        /* Usually, we remove outline from input element. */
+        outline: none;
+
+        /* Note: input element also has border. */
+        /* border: none; */
+      }
+
+      input:focus {
+        /* outline: 1px solid red; */
+        
+        /* Actually, we can remove outline, and change the border-color only */
+        /* This will not cause the layout shift. */
+        border-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+  </body>
+</html>

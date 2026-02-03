@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-Cursor</title>
+    <style>
+      html {
+        cursor: move;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        cursor: pointer;
+      }
+
+      .cursor-img {
+        /* 
+        When using url() to load cursor image,
+        1. Make sure the path is an absolute path in development.
+        2. Image size is best at ~32*32
+        3. Image format: ico, cur, png, svg
+            - ico or cur is recommended.
+            - we can convert png / svg to ico file
+        4. Must provide a fallback cursor style in case the image fails to load.
+        */
+        cursor: url(./fish.ico), pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box cursor-img"></div>
+  </body>
+</html>

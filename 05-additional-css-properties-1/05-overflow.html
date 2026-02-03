@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-Overflow</title>
+    <style>
+      body {
+        display: flex;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: khaki;
+        font-size: 20px;
+      }
+
+      .visible {
+        overflow: visible;
+      }
+
+      .hidden {
+        /* Note: The content may still be scrollable using programmes. */
+        overflow: hidden;
+      }
+
+      .scroll {
+        overflow: scroll;
+      }
+
+      .auto {
+        overflow: auto;
+      }
+
+      .clip {
+        /* Similar to overflow: hidden;
+            - The container cannot be scrolled, even using programmes.
+            - Will not create new formatting context.
+        */
+        overflow: clip;
+      }
+
+      .item {
+        overflow: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box hidden">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet recusandae
+      temporibus adipisci aut, tempora et necessitatibus. Nesciunt nisi
+      asperiores dolores?
+    </div>
+    <div class="box scroll">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet recusandae
+      temporibus adipisci aut, tempora et necessitatibus. Nesciunt nisi
+      asperiores dolores?
+    </div>
+    <div class="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet recusandae
+      temporibus adipisci aut, tempora et necessitatibus. Nesciunt nisi
+      asperiores dolores?
+    </div>
+    <div class="box auto">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet recusandae
+      temporibus adipisci aut, tempora et necessitatibus. Nesciunt nisi
+      asperiores dolores?
+    </div>
+    <div class="box clip">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet recusandae
+      temporibus adipisci aut, tempora et necessitatibus. Nesciunt nisi
+      asperiores dolores?
+    </div>
+    <div class="box visible">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet recusandae
+      temporibus adipisci aut, tempora et necessitatibus. Nesciunt nisi
+      asperiores dolores?
+    </div>
+
+    <div class="box hidden">
+      <!-- item inherit overflow property from his parent box. -->
+      <div class="item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error dolor
+        assumenda saepe repellat minima et blanditiis exercitationem aspernatur
+        architecto ut reprehenderit ad officiis iste tenetur, quidem fugiat qui,
+        dolore incidunt expedita asperiores. Dolore officiis numquam rem
+        reprehenderit, nam atque voluptate, at inventore labore suscipit,
+        laudantium sit nisi qui nobis amet.
+      </div>
+    </div>
+  </body>
+</html>

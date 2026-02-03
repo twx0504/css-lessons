@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06-Overflow Longhand Properties</title>
+    <style>
+      body {
+        display: flex;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: khaki;
+        font-size: 20px;
+        /* Longhand properties: */
+        overflow-y: hidden;
+        overflow-x: scroll;
+      }
+
+
+      /* Note:
+        - The computed values of overflow-x and overflow-y are related
+        - If specified, use specified value.
+        - Certain combinations force the browser to modify the computed value.
+        - e.g., If one axis is 'visible', and the other axis is not 'visible', the 'visible' axis is converted to 'auto'.
+        - e.g., If one axis is 'clip', and the other is not 'clip', the 'clip' axis is converted to 'hidden'.
+      */
+
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background-color: khaki;
+        font-size: 20px;
+        overflow-x: hidden;
+        overflow-y: clip; /* Get computed to hidden */
+      }
+
+      .box3 {
+        width: 100px;
+        height: 100px;
+        background-color: khaki;
+        font-size: 20px;
+        overflow-x: auto;
+        /* overflow-y get computed to auto too, note: default it is visible. */
+      }
+
+      .box4 {
+        width: 100px;
+        height: 100px;
+        background-color: khaki;
+        font-size: 20px;
+        overflow-x: scroll;
+        overflow-y: clip; /* overflow-y gets computed to hidden */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis debitis
+      hic quae, asperiores fugit expedita nobis deleniti repellendus suscipit
+      officiis maiores sunt iure ducimus exercitationem blanditiis aperiam sint
+      sequi quia laborum est natus ex quaerat odio. Soluta doloremque eius
+      dolore aspernatur sapiente, quisquam autem, sed vitae perferendis tenetur,
+      quia nobis.
+    </div>
+    <div class="box2">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis debitis
+      hic quae, asperiores fugit expedita nobis deleniti repellendus suscipit
+      officiis maiores sunt iure ducimus exercitationem blanditiis aperiam sint
+      sequi quia laborum est natus ex quaerat odio. Soluta doloremque eius
+      dolore aspernatur sapiente, quisquam autem, sed vitae perferendis tenetur,
+      quia nobis.
+    </div>
+    <div class="box3">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis debitis
+      hic quae, asperiores fugit expedita nobis deleniti repellendus suscipit
+      officiis maiores sunt iure ducimus exercitationem blanditiis aperiam sint
+      sequi quia laborum est natus ex quaerat odio. Soluta doloremque eius
+      dolore aspernatur sapiente, quisquam autem, sed vitae perferendis tenetur,
+      quia nobis.
+    </div>
+    <div class="box4">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis debitis
+      hic quae, asperiores fugit expedita nobis deleniti repellendus suscipit
+      officiis maiores sunt iure ducimus exercitationem blanditiis aperiam sint
+      sequi quia laborum est natus ex quaerat odio. Soluta doloremque eius
+      dolore aspernatur sapiente, quisquam autem, sed vitae perferendis tenetur,
+      quia nobis.
+    </div>
+  </body>
+</html>

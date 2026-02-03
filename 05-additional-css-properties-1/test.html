@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <style>
+      /* font-family: Times New Roman; */
+      /* p height is 18px */
+      /* span height is 17px */
+      /* Setting line-height: 1;, p height becomes 16px */
+      /* span height remains 17px  */
+      /* So span size (content) depends on different factors: font-size, font-family, etc. */
+      p {
+        background-color: red;
+        margin: 0;
+        /* Default line-height around 1.2 */
+      }
+
+      span {
+        /* span height is slightly higher than font-size, it is likely to include some space above and below the content text. */
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Span size is not 16px, it is varying when using different font-family -->
+    <p><span>Lorem ipsum dolor sit amet.</span></p>
+  </body>
+</html>

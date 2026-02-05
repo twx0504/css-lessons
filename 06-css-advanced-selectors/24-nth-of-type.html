@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>24-Nth Of Type</title>
+    <style>
+      /* 
+        :nth-of-type(n): Select nth element of each tag type among its sibling
+        - n: 1-based
+        - keywords: odd, even
+        - an+b: where n starts from 0
+      */
+      .box :nth-of-type(2) {
+        color: green;
+      }
+
+
+      /* In this case, the type is fixed to p, so it will select the third p. */
+      .box p:nth-of-type(3) {
+        background-color: red;
+      }
+
+      .box :nth-of-type(2n + 1) {
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>Lorem ipsum dolor sit amet.</p>
+      <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus
+        sapiente veritatis, rem voluptatem aspernatur eveniet provident
+        architecto neque doloremque accusantium hic ipsa aperiam. Pariatur,
+        provident quisquam adipisci facere quas dignissimos.
+      </div>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
+        praesentium ducimus et unde omnis possimus reiciendis voluptatibus
+        alias? Maiores maxime libero, nam quaerat nulla esse omnis eaque
+        aliquam. Beatae, impedit.
+      </div>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam itaque
+        rerum repellendus natus? Nostrum debitis quaerat vero neque quod, minus
+        tenetur harum eveniet nam rerum, labore officia praesentium, impedit
+        autem.
+      </div>
+    </div>
+  </body>
+</html>

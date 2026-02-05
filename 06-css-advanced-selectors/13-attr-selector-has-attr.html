@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13-Attr Selector: Has Attr</title>
+    <style>
+
+        /* 1. elem[attr] */
+        input[class] {
+            background-color: tomato;
+        }
+
+        a[target] {
+            color: red;
+        }
+
+        h3[title] {
+            color: blue;
+        }
+
+
+    </style>
+  </head>
+  <body>
+    <input type="text" class="user" placeholder="Enter username:" />
+    <input type="password" class="pwd" placeholder="Enter password:" />
+    <input type="text">
+    <a href="https://www.google.com/" target="_blank">Google</a>
+    <h3 title="Title">Lorem ipsum dolor sit amet.</h3>
+  </body>
+</html>

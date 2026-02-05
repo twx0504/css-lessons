@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-Basic Selectors</title>
+    <style>
+      /* Universal Selector */
+      * {
+        margin: 0;
+      }
+
+      /* Type Selector */
+      p {
+        background-color: tomato;
+        color: #666;
+      }
+
+      /* Class Selector */
+      .title {
+        font-size: 30px;
+      }
+
+      /* ID Selector */
+      #box {
+        border: 2px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Specificity:
+        inline style > id selector > class selector > type selector > universal selector 
+    -->
+    <!-- Inline style: It will overwrite the color in type selector -->
+    <p class="title" id="box" style="color: #fff">
+      Lorem ipsum dolor sit amet.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12-Pseudo Element</title>
+    <style>
+      /* Note: 
+        - Not all pseudo element keywords will create an pseudo element.
+        - Pseudo elements are commonly used for decoration purpose (e.g., creates buttons / overlay / etc.).
+        - CSS2 :before & :after (This is still a valid syntax)
+        - CSS3 ::before & ::after (Just to differentiate from pseudo-class)
+
+      */
+
+      /* 
+        ::before: 
+            - creates a pseudo-element that is the first child of the selected element 
+            - inline box by default
+            - content must be specified, even empty
+        */
+
+      .box::before {
+        content: "before";
+        /* We make pseudo-element a block element so we can set its size */
+        /* We can do much more with it, for example, use position to adjust the position of the pseudo element */
+        display: block;
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        background-color: red;
+      }
+
+      .box::after {
+        content: "after";
+        display: block;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        background-color: blue;
+      }
+
+      /* ::placeholder: represent the placeholder text of input / textarea */
+
+      input::placeholder {
+        font-size: 10px;
+        color: white;
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Lorem ipsum dolor sit amet.</div>
+    <!-- Using ::before & ::after are equivalent to: -->
+    <!-- <div class="box">
+      <span>before</span>Lorem ipsum dolor sit <amet class="span">after</amet>
+    </div> -->
+
+    <input type="text" placeholder="Enter your username" />
+  </body>
+</html>

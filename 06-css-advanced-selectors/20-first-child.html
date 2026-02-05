@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20-First Child</title>
+    <style>
+      /* Select the first child of ul */
+      ul :first-child {
+        background-color: red;
+      }
+
+      /* Note: it is slightly different than ul :first-child. */
+      /* Select li that is the first element in the ul */
+      ul li:first-child {
+        color: #fff;
+      }
+
+      /* Select the first child of .box */
+      .box :first-child {
+        background-color: blue;
+      }
+
+      /* Select h3 that is the first element in .box */
+      .box h3:first-child {
+        background-color: red;
+      }
+
+      /* Select the first child of .box p */
+      .box p :first-child {
+        background-color: yellowgreen;
+        color: #fff;
+      }
+
+      /* Select the p element that is the first element in .box */
+      .box p:first-child {
+        padding: 20px;
+        border: 10px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+    <div class="box">
+      <p><span>span</span>Lorem ipsum dolor sit amet.</p>
+      <!-- h3 here is not the first element of .box, so it will not be styled. -->
+      <h3>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis,
+        ducimus.
+      </h3>
+    </div>
+  </body>
+</html>

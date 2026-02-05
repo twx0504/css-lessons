@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06-Child Combinator</title>
+    <style>
+      /* Child Combinator
+        - "elem > child"
+        - Select direct children of the elem
+      */
+
+      .box > h3 {
+        color: red;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>.box p</p>
+      <div class="item">
+        <p>.box .item p</p>
+      </div>
+      <p>.box p</p>
+      <h3>.box h3</h3>
+      <div><h3>.box .div h3</h3></div>
+    </div>
+
+    <div class="box">
+        <h3>.box h3</h3>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11-Pseudo Class: Checked</title>
+    <style>
+      /* input:checked {
+        outline: 2px solid deeppink;
+      } */
+
+      /* :checked: represents radio / checkbox / option that is checked / selected */
+
+      /* Usually, we will use :checked when we want to hide or show an element based on the state of checkbox */
+      input:checked + div {
+        display: none;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <input type="radio" name="" id=""> -->
+    <!-- Usually, we will wrap input and related element and text in label -->
+    <!-- Doing so, when we click on text, it is the same as click on the checkbox -->
+    <label for="show">
+      <input type="checkbox" name="show" id="show" />
+      show
+      <div class="box"></div>
+    </label>
+  </body>
+</html>

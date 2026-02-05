@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>29-Demo-Switch Button</title>
+    <style>
+      .button {
+        width: 60px;
+        height: 26px;
+        background-color: #ddd;
+        border-radius: 20px;
+        padding: 2px;
+        cursor: pointer;
+      }
+
+      .button::before {
+        content: "";
+        width: 26px;
+        height: 26px;
+        display: block;
+        background-color: #fff;
+        border-radius: 50%;
+
+        /* Add transition */
+        transition: margin-left 0.5s;
+      }
+
+      /* Hide checkbox */
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      /* Based on the checbox state, change the button style */
+      input:checked ~ .button {
+        background-color: skyblue;
+      }
+
+      input:checked ~ .button::before {
+        margin-left: calc(60px - 26px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- label group input and related element together. -->
+    <!-- for value = input's id -->
+    <!-- Clicking other element inside label element will also affect the input element -->
+    <label for="switch">
+      <input type="checkbox" name="switch" id="switch" />
+      <div class="button"></div>
+    </label>
+  </body>
+</html>

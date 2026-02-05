@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>08-Subsequent Sibling Combinator</title>
+    <style>
+      /* Subsequent Sibling Combinator
+            - "elem ~ subsequentSiblingElem"
+            - Select all siblings preceded by elem, given elem and siblings are all under the same parent.
+            - Note: No need immediately preceded by elem + the siblings can be anywhere after elem.
+        */
+      h3 ~ p {
+        color: green;
+      }
+
+      h3 ~ div {
+        width: 200px;
+        height: 200px;
+        background-color: tomato;
+      }
+
+      h4 ~ span {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Dolorum blanditiis inventore ad? Quis.</p>
+      <h3>h3</h3>
+      <p>Iste voluptatibus repudiandae nisi ipsa!</p>
+      <div>div</div>
+      <p class="title">Sapiente vel dolorum nesciunt iure.</p>
+      <p>Nesciunt, alias nemo. Iusto, necessitatibus.</p>
+      <div>div</div>
+      <h4>
+        <span>span</span>
+      </h4>
+      <span>span</span>
+    </div>
+  </body>
+</html>

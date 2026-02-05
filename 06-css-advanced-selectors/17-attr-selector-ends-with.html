@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>17-Attr Selector: Ends With</title>
+    <style>
+      /* 1. elem[attr$='value'] */
+      div[class$="button"] {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="icon">icon</div>
+    <div class="icon-close">icon-close</div>
+    <div class="icon-button">icon-button</div>
+    <div class="icon buttons js-button">buttons js-button</div>
+    <div class="buttons">buttons</div>
+    <div class="icons">icons</div>
+  </body>
+</html>

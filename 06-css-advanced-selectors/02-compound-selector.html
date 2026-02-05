@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02-Compound Selector</title>
+    <style>
+      /* Compound Selector
+            - A sequence of simple selector that is not separated by a combinator.
+        */
+
+      /* Select the element that is h3 AND has a class name "title" */
+      h3.title {
+        color: red;
+      }
+
+      /* Select the element that is div AND has a class name "box" */
+      div.box {
+        width: 200px;
+        height: 200px;
+        background-color: tomato;
+      }
+
+      /* Select the element that is div AND has a class name "box" AND "box1" */
+      div.box.box1 {
+        border: 3px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 class="title">Title</h3>
+    <h3>Lorem ipsum dolor sit amet.</h3>
+    <div class="box box1">Lorem ipsum dolor sit amet.</div>
+    <div>Lorem ipsum dolor sit amet.</div>
+    <div class="box">Lorem ipsum dolor sit amet.</div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07-Next Sibling Combinator</title>
+    <style>
+      /* Next Sibling Combinator
+            - "elem + nextSibling"
+            - Select nextSiblingElem if nextSibling is immediately preceded by elem
+        */
+
+      .box h3 + p {
+        color: tomato;
+      }
+
+      .title + p {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Dolorum blanditiis inventore ad? Quis.</p>
+      <h3>h3</h3>
+      <p>Iste voluptatibus repudiandae nisi ipsa!</p>
+      <p class="title">Sapiente vel dolorum nesciunt iure.</p>
+      <p>Nesciunt, alias nemo. Iusto, necessitatibus.</p>
+      <div class="box">
+        <h3>h3</h3>
+        <p>Iste voluptatibus repudiandae nisi ipsa!</p>
+      </div>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Sapiente ea veritatis tenetur ad.</p>
+      <p>Atque molestiae placeat nam exercitationem.</p>
+      <p>Recusandae asperiores expedita quos repellat.</p>
+      <p>Optio doloremque iste tenetur soluta?</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>09-Pseudo Class: Link</title>
+    <style>
+      /* Note: We must define styles in this order
+        :link, :visited, :hover, :active
+      */
+
+      /* :link and :visited only for <a> elements */
+      /* :link: An element has not yet visited */
+      a:link {
+        color: red;
+      }
+
+      /* :visited: An element has been visited */
+      a:visited {
+        color: green;
+      }
+
+
+      /* Note: :hover & :active can be used on other elements. */
+      /* :hover: when pointer hovers over a */
+      a:hover {
+        color: orange;
+      }
+
+      /* :active: when pointer clicks and has not yet released */
+      a:active {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="">Lorem ipsum dolor sit amet.</a>
+  </body>
+</html>

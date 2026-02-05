@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>28-Empty</title>
+    <style>
+      p:empty {
+        height: 50px;
+        background-color: red;
+      }
+      div:empty {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+      }
+
+      /* */
+      .box::after {
+        content: "a";
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Empty -->
+    <p></p>
+    <!-- This is not empty, there's text node in p -->
+    <p>Lorem ipsum dolor sit amet.</p>
+    <!-- This is not empty, p has span element in it. -->
+    <p><span></span></p>
+    <!-- Empty -->
+    <p></p>
+    <div></div>
+    <!-- This .box is still empty, despite having an ::after pseudoelement, and comment in it -->
+    <div class="box"><!-- comment --></div>
+  </body>
+</html>

@@ -89,7 +89,13 @@ input {
 - e.g., If one axis is 'visible', and the other axis is not 'visible', the 'visible' axis is converted to 'auto'.
 - e.g., If one axis is 'clip', and the other is not 'clip', the 'clip' axis is converted to 'hidden'.
 
-## 4. Vertical-align
+## 4. Vertical Align
+
+> Note: 
+> - `vertical-align` may not be able to vertically center an element precisely
+> - Use `position` to adjust if needed
+> - This property is rarely used now.
+> - Modern ways of centering element uses `flexbox`.
 
 - Set the vertical alignment of an inline level element / table cell box.
 - Values:

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>26-Only Child</title>
+    <style>
+      .box :only-child {
+        color: red;
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <!-- p is the only child of .box -->
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="box">
+      <!-- p here is not only child of .box, .box has two p! -->
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <!-- Text node is not considered the only child. -->
+    <div class="box">Lorem ipsum dolor sit amet.</div>
+  </body>
+</html>

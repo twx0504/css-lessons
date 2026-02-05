@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>18-Attr Selector: Contains</title>
+    <style>
+      /* 1. elem[attr*='value'] */
+      div[class*="icon"] {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="icon">icon</div>
+    <div class="icon-close">icon-close</div>
+    <div class="icon-button">icon-button</div>
+    <div class="icon button js-button">icon button</div>
+    <div class="icons">icons</div>
+  </body>
+</html>

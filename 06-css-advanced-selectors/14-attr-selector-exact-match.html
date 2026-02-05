@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>14-Attr Selector: Exact Match</title>
+    <style>
+      /* 1. elem[attr='value'] */
+      input[class="user"] {
+        background-color: tomato;
+      }
+
+      a[target="_blank"] {
+        color: red;
+      }
+
+      h3.box[title="Title1"] {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" class="user" placeholder="Enter username:" />
+    <input type="password" class="pwd" placeholder="Enter password:" />
+    <input type="text" />
+    <a href="https://www.google.com/" target="_blank">Google</a>
+    <a href="https://www.amazon.com/" target="_self">Amazon</a>
+    <h3 class="box" title="Title1">Lorem ipsum dolor sit amet.</h3>
+    <h3 title="Title2">Lorem ipsum dolor sit amet.</h3>
+  </body>
+</html>

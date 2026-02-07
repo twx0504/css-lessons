@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-Specificity: Caveat</title>
+    <style>
+      /* Specificity: 0,0,1,0 */
+      .paragraph {
+        color: red;
+      }
+
+      /* Note: This is not recommended, but no matter how many type selectors specified here, its specificity is still lower than a single class selector. */
+      /* Specificity: 0,0,0,11 */
+      div div div div div div div div div div div p {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      1
+      <div>
+        2
+        <div>
+          3
+          <div>
+            4
+            <div>
+              5
+              <div>
+                6
+                <div>
+                  7
+                  <div>
+                    8
+                    <div>
+                      9
+                      <div>
+                        10
+                        <div>
+                          11
+                          <p class="paragraph">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

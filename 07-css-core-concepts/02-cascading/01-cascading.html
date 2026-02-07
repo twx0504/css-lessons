@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-Cascading</title>
+    <style>
+      /* Cascading:
+        - when multiple CSS rulesets work on the same element,
+        - Similar property: overwrite
+        - Different property: add
+
+      */
+
+      div {
+        font-size: 20px;
+      }
+
+      /* Similar specificity, font-size will be 50px instead of 20px */
+      .box {
+        color: red;
+        font-size: 50px;
+      }
+
+      /* Higher specificity, color will be blue instead of red */
+      div.box {
+        background-color: yellow;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Lorem ipsum dolor sit amet.</div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-Specificity</title>
+    <style>
+      /* 
+        Specificity:
+        Universal Selector, Combinator: 0,0,0,0
+        Type Selector, Pseudo-element: 0,0,0,1
+        Class Selector, Attribute Selector, Pseudo-class: 0,0,1,0
+        ID Selector: 0,1,0,0
+        Inline Style: 1,0,0,0
+        !important: Infinity
+      */
+
+      * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      /* Specificity: 0,0,1,1 */
+      .box p {
+        color: red;
+      }
+
+      /* Specificity: 0,0,0,2 */
+      div p {
+        color: blue;
+      }
+
+      /* div p.title:hover {} */
+
+      /* Specificity: 0,0,1,2 */
+      div p.title {
+        color: green;
+      }
+
+      /* Specificity: 0,0,1,2
+        - Since the specificity is the same as div p.title,
+        - We need to put :hover behind div p.title for it to work.
+        - If we want to put div p:hover before div p.title,
+        - We can manually increase the specificity.
+        - Example, div p.title:hover, which has the specificity of 0022
+      */
+      div p:hover {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p class="title">Lorem ipsum dolor sit amet.</p>
+    </div>
+  </body>
+</html>

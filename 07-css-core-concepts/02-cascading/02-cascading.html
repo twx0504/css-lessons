@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02-Cascading</title>
+    <style>
+      /*
+        - When selectors have the same specificity, the rule declared later takes effect.
+        - When selectors have different specificity, the rule with higher specificity takes effect.
+      */
+
+
+      /* Class Selector has higher specificity than type selector. */
+      /* .box & .box1 have the same specificity, .box1 style takes effect because it is declared later. */
+      .box {
+        color: red;
+      }
+
+      .box1 {
+        color: blue;
+      }
+      
+      div {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1">Lorem ipsum dolor sit amet.</div>
+  </body>
+</html>

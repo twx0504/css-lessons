@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem</title>
+    <style>
+      .box {
+        font-style: italic;
+      }
+      /* Specificity 0012 */
+      .box p span {
+        color: blue;
+      }
+      /* Specificity 0011 */
+      span:hover {
+        /* Problem: Why is the span not red when hovered? */
+        /* -> Due to Specificity */
+        color: red;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>
+        <!-- Problem: Why is the text inside the span in italic style? -->
+        <!-- Due to Inheritance  -->
+        <span>Span Content</span>
+      </p>
+    </div>
+  </body>
+</html>

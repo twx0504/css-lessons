@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04-Specificity</title>
+    <style>
+      /*
+        To determine which selector has higher specificity,
+        CSS compares selectors by specificity, not by DOM distance.
+
+        Specificity is compared in this order:
+        inline > id > class > type
+
+        The selector with higher specificity wins.
+        If specificity is equal, the later declaration wins.
+     */
+
+      p#title {
+        color: red;
+      }
+
+      #box #title {
+        color: blue;
+      }
+
+      /* .box1 .box2 p {
+        color: green;
+      }
+      .box div p[id] {
+        color: violet;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box">
+      <div class="box1">
+        <div class="box2">
+          <p id="title">Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

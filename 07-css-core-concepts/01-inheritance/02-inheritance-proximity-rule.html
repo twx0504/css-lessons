@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02-Inheritance: Proximity Rule</title>
+    <style>
+      /* If the element does not set a inherited property explicitly, it will inherit from its parent, or even ancestors, if the parent also doesn`t have the value set. */
+      /* Rule of Proximity: The element will inherit the style from its nearest ancestor that has the value set. */
+      /* Note: The rule of proximity is based on the document structure, not where you order the selector in the stylesheet. */
+      /* If all ancestor has no value set, it will use the user agent initial value. */
+      .box {
+        font-size: 30px;
+        color: blue;
+        text-align: center;
+      }
+
+      .box1 {
+        /* 
+            Since box1 also has color and text-align.
+            Based on the rule of proximity, color and text-align of .box1,  not .box,  
+            will be applied to p.
+            That's why the text in the p element appears to be aligned left and red color.
+        */
+        color: red;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box1">
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+  </body>
+</html>

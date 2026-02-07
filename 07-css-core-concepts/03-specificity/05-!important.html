@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-!important</title>
+    <style>
+      /* !important will win. */
+      /* !important declarations take precedence over normal declarations. */
+      /* Use with caution; generally not recommended. */
+      /* An !important declaration can only be overridden by another !important declaration
+        with higher specificity or later source order. 
+      */
+      div {
+        color: red !important;
+      }
+      /* div {
+        color: yellow !important;
+      } */
+
+      #box {
+        color: orange;
+      }
+
+      /* #box {
+        color: violet !important;
+      } */
+    </style>
+  </head>
+  <body>
+    <div id="box" style="color: blue">Lorem ipsum dolor sit amet.</div>
+  </body>
+</html>
